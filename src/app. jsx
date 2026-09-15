@@ -1,0 +1,21 @@
+import { useState } from 'react'
+import Button from './components/button'
+
+function App() {
+  const [message, setMessage] = useState("Click any button")
+
+  return (
+    <div style={{ textAlign: 'center', padding: '50px' }}>
+      <h1>Day 4: My First Component</h1>
+      
+      <p style={{ fontSize: '20px', fontWeight: 'bold', color: 'green' }}>
+        {message}
+      </p>
+      
+      <Button text="Click Me" onClick={() => setMessage("Click Me button pressed!")} />
+      <Button text="Submit" onClick={() => setMessage("Submit button pressed!")} />
+      <Button text="Login" onClick={() => setMessage("Login button pressed!")} />
+    </div>
+  )
+}
+export default App
